@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { signInWithGooglePopUp, createUserDocumentWithAuth, signInAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
+import { signInWithGooglePopup, createUserDocumentWithAuth, signInAuthUserWithEmailAndPassword } from "../../utils/firebase/firebase.utils";
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
 import './sign-in-form.style.scss';
@@ -19,7 +19,7 @@ const SignInForm = () => {
         setFormFields(defaultFormFields);
     }
     const signInWithGoogle = async () => {
-        await signInWithGooglePopUp();
+        await signInWithGooglePopup();
     }
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -51,7 +51,6 @@ const SignInForm = () => {
                     <Button type="submit">Sign In</Button>
                     <Button type='button' buttonType='google' onClick={signInWithGoogle}>Google Sign In</Button>
                 </div>
-
             </form>
         </div>
     )
